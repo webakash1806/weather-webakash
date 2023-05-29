@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="inp">
+            <input type="text" id="country-name">
+            <button onclick="sub()">Submit</button>
+        </div>
+
+        <div class="loc">
+
+            <i class="fa-solid fa-location-dot"></i>
+            <p id="location">Location</p>
+        </div>
+
+
+        <div class="temp-data">
+            <p id="temp">
+                --
+            </p>
+            <p id="cond">Condition</p>
+            <p id="date-time">Day, Date</p>
+        </div>
+
+        <div class="sec-four">
+            <div class="wind sec-four-data">
+                <img src="" alt="">
+                <p id="wind">--</p>
+                <p class="end">Wind</p>
+            </div>
+            <div class="cloud sec-four-data">
+                <img src="" alt="">
+                <p id="cloud">--</p>
+                <p class="end">Cloud</p>
+            </div>
+            <div class="humidity sec-four-data">
+                <img src="" alt="">
+                <p id="humidity">--</p>
+                <p class="end">Humidity</p>
+            </div>
+            <div class="rain sec-four-data">
+                <img src="" alt="">
+                <p id="rain">--</p>
+                <p class="end">Chances of rain</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
