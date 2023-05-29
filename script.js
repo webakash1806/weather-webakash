@@ -23,7 +23,22 @@ function sub() {
         document.getElementById("cloud").innerHTML = `${value1.current.cloud}%`
         document.getElementById("humidity").innerHTML = `${value1.current.humidity}%`
         document.getElementById("rain").innerHTML = `${value1.forecast.forecastday[0].day.daily_chance_of_rain}%`
+        document.getElementById("date-1").innerHTML = `${value1.forecast.forecastday[0].date}`
+        document.getElementById("date-2").innerHTML = `${value1.forecast.forecastday[1].date}`
+        document.getElementById("date-3").innerHTML = `${value1.forecast.forecastday[2].date}`
+        document.getElementById("date-4").innerHTML = `${value1.forecast.forecastday[3].date}`
+        document.getElementById("high-temp-1").innerHTML = `${value1.forecast.forecastday[0].day.maxtemp_c}C`
+        document.getElementById("high-temp-2").innerHTML = `${value1.forecast.forecastday[1].day.maxtemp_c}C`
+        document.getElementById("high-temp-3").innerHTML = `${value1.forecast.forecastday[2].day.maxtemp_c}C`
+        document.getElementById("high-temp-4").innerHTML = `${value1.forecast.forecastday[3].day.maxtemp_c}C`
+        document.getElementById("low-tem-1").innerHTML = `${value1.forecast.forecastday[0].day.mintemp_c}C`
+        document.getElementById("low-tem-2").innerHTML = `${value1.forecast.forecastday[1].day.mintemp_c}C`
+        document.getElementById("low-tem-3").innerHTML = `${value1.forecast.forecastday[2].day.mintemp_c}C`
+        document.getElementById("low-tem-4").innerHTML = `${value1.forecast.forecastday[3].day.mintemp_c}C`
 
+        // for (let i = 0; i <= 3; i++) {
+        //     document.getElementById("fix").innerHTML = value1.forecast.forecastday[i].date
+        // }
 
 
     })
