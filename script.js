@@ -17,6 +17,7 @@ function sub() {
         console.log(value1)
         document.getElementById("location").innerHTML = `${value1.location.name}, ${value1.location.region}, ${value1.location.country}`
         document.getElementById("cond").innerHTML = value1.current.condition.text
+        document.getElementById("imgMain").innerHTML = `<img src="${value1.current.condition.icon}">`
         document.getElementById("temp").innerHTML = `${Math.round(value1.current.temp_c)}\u00B0C`
         document.getElementById("date-time").innerHTML = value1.location.localtime
         document.getElementById("wind").innerHTML = `${value1.current.wind_kph} km/h`

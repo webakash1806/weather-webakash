@@ -5,18 +5,20 @@
 
 body {
     display: flex;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
+    overflow-x: hidden;
     align-items: center;
     justify-content: center;
 }
 
 .main {
-    overflow: hidden;
+    margin: 10px;
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 90vw;
+    width: 36rem;
     justify-content: center;
     border: 2px solid red;
     padding: 20px;
@@ -41,8 +43,26 @@ body {
     gap: 5px;
 }
 
-.sec-four {
+.temp-data-main {
     display: flex;
+    align-items: center;
+}
+
+#imgMain img {
+    height: 5rem;
+}
+
+#temp {
+    font-size: 50px;
+}
+
+#cond {
+    font-size: 25px;
+}
+
+.sec-four {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
     gap: 20px;
 }
 
@@ -54,57 +74,16 @@ body {
     gap: 5px;
 }
 
-#date {
-    width: 20rem;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: 15rem;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    /* scroll-margin-left: 10px; */
-
+.sec-four-data i {
+    font-size: 25px;
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.922), rgba(100, 100, 100, 0.796), rgba(135, 134, 134, 0.363), rgba(183, 181, 181, 0.226));
-    border-radius: 10px;
-}
-
-/* Handle on hover
-::-webkit-scrollbar-thumb:hover {
-    background: #b30000; */
-
-.forecastData {
-    display: flex;
-    padding: 5px;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f67f7f78;
-    margin-right: 3px;
-}
-
-.forecastData .forImg {
-    height: 35px;
-    width: 35px;
-}
 
 .hour-for {
     display: flex;
     overflow-x: scroll;
     scroll-behavior: smooth;
+    overflow: auto;
     width: 36rem;
     gap: 20px;
 }
@@ -121,12 +100,68 @@ body {
 .firstHourData,
 .secondHourData {
     padding: 5px 0;
-    font-weight: 600;
-    font-size: 18px;
-    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.2px;
     border-radius: 7px;
-    background-color: #f67f7f78;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.firstImg {
+    height: 52px;
+    /* width: 38px; */
+}
+
+
+#date {
+    width: 23rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 15rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    overflow: auto;
+}
+
+.forecastData {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 7px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    box-shadow: -1px 2px 5px #808080;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right: 3px;
+}
+
+.forecastData .forImg {
+    height: 35px;
+    width: 35px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.922), rgba(100, 100, 100, 0.796), rgba(135, 134, 134, 0.363), rgba(228, 228, 228, 0.226));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(rgba(0, 0, 0, 0.922), rgba(100, 100, 100, 0.796), rgba(135, 134, 134, 0.363), rgba(228, 228, 228, 0.226));
 }
