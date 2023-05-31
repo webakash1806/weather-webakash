@@ -41,6 +41,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 5px;
+    margin-bottom: 20px;
 }
 
 .temp-data-main {
@@ -164,4 +165,26 @@ body {
 
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.922), rgba(100, 100, 100, 0.796), rgba(135, 134, 134, 0.363), rgba(228, 228, 228, 0.226));
+}
+
+
+@media screen and (max-width: 480px) {
+
+    #imgMain img {
+        height: 5.5rem;
+    }
+
+    #temp {
+        font-size: 60px;
+    }
+
+    .sec-four {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    .hour-for {
+        width: 22rem;
+    }
+
 }
