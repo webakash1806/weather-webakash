@@ -168,7 +168,7 @@ body {
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 500px) {
 
     #imgMain img {
         height: 5.5rem;
@@ -184,7 +184,16 @@ body {
     }
 
     .hour-for {
-        width: 22rem;
+        width: 20rem;
+    }
+
+    #firstDay,
+    #secondDay {
+        gap: 8px;
+    }
+
+    #date {
+        width: 20rem;
     }
 
 }
