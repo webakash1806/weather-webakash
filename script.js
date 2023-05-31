@@ -74,6 +74,10 @@ function sub() {
         });;
 
     document.getElementById("country-name").value = ""
+    document.getElementById("firstDay").innerHTML = ""
+    document.getElementById("secondDay").innerHTML = ""
+    document.getElementById("date").innerHTML = ""
+
 }
 
 
