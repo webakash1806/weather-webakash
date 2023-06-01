@@ -19,7 +19,9 @@ function sub() {
         document.getElementById("cond").innerHTML = value1.current.condition.text
         document.getElementById("imgMain").innerHTML = `<img src="${value1.current.condition.icon}">`
         document.getElementById("temp").innerHTML = `${Math.round(value1.current.temp_c)}\u00B0C`
-        document.getElementById("date-time").innerHTML = value1.location.localtime
+        let dateTime = [...(value1.location.localtime)]
+        console.log(dateTime)
+        document.getElementById("date-time").innerHTML = `${dateTime[8]}${dateTime[9]}${dateTime[7]}${dateTime[5]}${dateTime[6]}${dateTime[4]}${dateTime[0]}${dateTime[1]}${dateTime[2]}${dateTime[3]}${dateTime[10]}${dateTime[11]}${dateTime[12]}${dateTime[13]}${dateTime[14]}${dateTime[15]}`
         document.getElementById("wind").innerHTML = `${value1.current.wind_kph} km/h`
         document.getElementById("cloud").innerHTML = `${value1.current.cloud}%`
         document.getElementById("humidity").innerHTML = `${value1.current.humidity}%`
@@ -54,7 +56,7 @@ function sub() {
         });
 
         filteredData.forEach(hour => {
-            console.log(`${hour.time[11]}${hour.time[12]}:${hour.time[14]}${hour.time[15]} ${hour.condition.icon} ${hour.temp_c}`);
+            // console.log(`${hour.time[11]}${hour.time[12]}:${hour.time[14]}${hour.time[15]} ${hour.condition.icon} ${hour.temp_c}`);
             document.getElementById("firstDay").innerHTML += ` <div class="firstHourData"> <p> ${hour.time[11]}${hour.time[12]}:${hour.time[14]}${hour.time[15]}</p> <img src="${hour.condition.icon}" class="firstImg"> <p> ${Math.round(hour.temp_c)}\u00B0C</p></div>`
         });
 
@@ -64,7 +66,7 @@ function sub() {
         });
 
         filteredData2.forEach(hour => {
-            console.log(`${hour.time[11]}${hour.time[12]}:${hour.time[14]}${hour.time[15]} ${hour.condition.icon} ${hour.temp_c}`);
+            // console.log(`${hour.time[11]}${hour.time[12]}:${hour.time[14]}${hour.time[15]} ${hour.condition.icon} ${hour.temp_c}`);
             document.getElementById("secondDay").innerHTML += ` <div class="secondHourData"> <p> ${hour.time[11]}${hour.time[12]}:${hour.time[14]}${hour.time[15]}</p> <img src="${hour.condition.icon}" class="firstImg"> <p> ${Math.round(hour.temp_c)}\u00B0C</p></div>`
         });
 
