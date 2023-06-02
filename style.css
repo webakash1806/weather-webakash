@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -11,6 +12,7 @@ body {
     justify-content: center;
 }
 
+/* main-section */
 .main {
     margin: 10px;
     overflow-x: hidden;
@@ -25,6 +27,7 @@ body {
     box-shadow: 2px 2px 20px #646464;
 }
 
+/* input-box with search-button */
 .inp {
     display: flex;
     gap: 2px;
@@ -33,6 +36,7 @@ body {
     border-radius: 5px;
 }
 
+/* input-box */
 .inpLoc {
     outline: none;
     padding: 4px 5px;
@@ -43,6 +47,7 @@ body {
     font-size: 16px;
 }
 
+/* search-btn */
 .btnLoc {
     border: none;
     cursor: pointer;
@@ -50,17 +55,32 @@ body {
     background-color: transparent;
 }
 
+/* search-btn-icon */
 .btnLoc i {
     color: red;
     font-weight: 900;
     font-size: 17px;
 }
 
+/* location-section */
 .loc {
     display: flex;
-    gap: 5px;
+    align-items: center;
+    gap: 8px;
 }
 
+/* location-icon */
+.loc i {
+    color: rgb(255, 68, 0);
+    font-size: 20px;
+}
+
+/* location-name */
+.loc p {
+    font-size: 17px;
+}
+
+/* temperature-section with condition and date-time */
 .temp-data {
     display: flex;
     flex-direction: column;
@@ -70,60 +90,111 @@ body {
     margin-bottom: 20px;
 }
 
+/* temperature-section of icon and temp-data */
 .temp-data-main {
     display: flex;
     align-items: center;
 }
 
+/* temperature-section icon */
 #imgMain img {
     height: 5rem;
 }
 
+/* temperature-data-style */
 #temp {
     font-size: 50px;
+    display: flex;
 }
 
+/* celcius-style of main temp-data */
+.celcius {
+    font-size: 32px;
+    margin-top: 6px;
+}
+
+/* condition-style */
 #cond {
     font-size: 25px;
 }
 
+/* main-section-style of wind-cloud-humidity-rain */
 .sec-four {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
     gap: 20px;
 }
 
+/* each-Section-style of wind-cloud-humidity-rain */
 .sec-four-data {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 8px;
 }
 
+/* style of wind-cloud-humidity-rain icon */
 .sec-four-data i {
     font-size: 25px;
 }
 
+/* style of wind-cloud-humidity-rain data*/
+.sec-four-data p:nth-child(2) {
+    color: red;
+    font-weight: 500;
+    font-size: 16px;
+}
 
+/* style of wind-cloud-humidity-rain heading */
+.sec-four-data p:nth-child(3) {
+    color: #02002a;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* style of wind icon */
+.wind i {
+    color: #035446;
+}
+
+/* style of cloud icon */
+.cloud i {
+    color: #0187C5;
+}
+
+/* style of humidity icon */
+.humidity i {
+    color: #515184;
+}
+
+/* style of rain icon */
+.rain i {
+    color: #4C657D;
+}
+
+/* hourly-forecast-style */
 .hour-for {
     display: flex;
     overflow-x: scroll;
     scroll-behavior: smooth;
     overflow: auto;
     width: 36rem;
-    gap: 20px;
+    gap: 12px;
 }
 
+/* hourly-forecast-each hour section */
 #firstDay,
 #secondDay {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     margin-bottom: 4px;
+
 }
 
+/* hourly-forecast-each hour section */
 .firstHourData,
 .secondHourData {
     padding: 5px 0;
@@ -136,14 +207,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 2px 1px 4px #808080;
+
 }
 
+/* hourly-forecast-each hour icon */
 .firstImg {
     height: 52px;
 }
 
-
-#date {
+/* future day forecast section */
+#future-day-forecast {
     width: 23rem;
     display: flex;
     flex-direction: column;
@@ -154,6 +228,7 @@ body {
     overflow: auto;
 }
 
+/* future forecast data style*/
 .forecastData {
     display: flex;
     margin: 5px;
@@ -168,63 +243,79 @@ body {
     margin-right: 3px;
 }
 
+/* future forecast icon style */
 .forecastData .forImg {
     height: 35px;
     width: 35px;
 }
 
+/* style for scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
 
+/* scrollbar tracking style */
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
 }
 
+/* scrollbasr thumb style */
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.922), rgba(100, 100, 100, 0.796), rgba(135, 134, 134, 0.363), rgba(228, 228, 228, 0.226));
     border-radius: 10px;
 }
 
+/* scrollbar style after hover */
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(rgba(0, 0, 0, 0.922), rgba(100, 100, 100, 0.796), rgba(135, 134, 134, 0.363), rgba(228, 228, 228, 0.226));
 }
 
 
-@media screen and (max-width: 500px) {
+/* Media queries */
 
+/* For smartphone Display with maximum width 480*/
+@media screen and (max-width: 480px) {
 
+    /* main style */
     .main {
         margin: 5px;
         min-width: 19.5rem;
     }
 
+    /* main icon of temperature data */
     #imgMain img {
         height: 5.5rem;
     }
 
+    /* main temp display */
     #temp {
         font-size: 60px;
     }
 
+    /* main-section-style of wind-cloud-humidity-rain */
     .sec-four {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
     }
 
+    /* hourly-forecast-style */
     .hour-for {
         width: 20rem;
     }
 
+    /* hourly-forecast-each hour section */
     #firstDay,
     #secondDay {
         gap: 8px;
     }
 
-    #date {
+    /* future day forecast section */
+    #future-day-forecast {
         width: 20rem;
     }
 
 }
+
+/* Media query ends for smartphone device max-width-480px */

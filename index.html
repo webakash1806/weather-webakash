@@ -6,60 +6,78 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Mixing error sol. (between HTTP & HTTPS) -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-    <title>Weather </title>
+    <!-- CSS link -->
+    <link rel="stylesheet" href="./style.css">
 
+    <!-- google fonts CDN (for fonts)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- font awesome CDN (for icon) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="./style.css">
+    <!-- title of webpage -->
+    <title>Weather __its_akash.18</title>
 </head>
 
 <body>
+
+    <!-- main-section -->
     <div class="main">
 
+        <!-- input-box with search-button -->
         <div class="inp">
             <input type="text" id="country-name" class="inpLoc" placeholder="Enter Location">
             <button class="btnLoc" onclick="sub()"><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
 
+        <!-- location-section -->
         <div class="loc">
-
             <i class="fa-solid fa-location-dot fa-shake"></i>
             <p id="location">Location</p>
         </div>
 
-
+        <!-- temperature-section with condition and date-time-->
         <div class="temp-data">
             <div class="temp-data-main">
                 <div id="imgMain"></div>
-                <p id="temp">
-                    --
-                </p>
+                <p id="temp"> -- </p>
             </div>
-
             <p id="cond">Condition</p>
             <p id="date-time">Date Time</p>
         </div>
 
+        <!-- Section of wind-cloud-humidity-rain -->
         <div class="sec-four">
+            <!-- wind-section -->
             <div class="wind sec-four-data">
                 <i class="fa-solid fa-wind fa-fade"></i>
                 <p id="wind">--</p>
                 <p class="end">Wind</p>
             </div>
+
+            <!-- cloud-section -->
             <div class="cloud sec-four-data">
                 <i class="fa-solid fa-cloud fa-beat-fade"></i>
                 <p id="cloud">--</p>
                 <p class="end">Cloud</p>
             </div>
+
+            <!-- humidity-section -->
             <div class="humidity sec-four-data">
                 <i class="fa-solid fa-droplet"></i>
                 <p id="humidity">--</p>
                 <p class="end">Humidity</p>
             </div>
+
+            <!-- rain-section -->
             <div class="rain sec-four-data">
                 <i class="fa-solid fa-cloud-rain fa-shake"></i>
                 <p id="rain">--</p>
@@ -67,19 +85,19 @@
             </div>
         </div>
 
-
+        <!-- hourly-forecast-section -->
         <div class="hour-for">
             <div id="firstDay"></div>
             <div id="secondDay"></div>
         </div>
 
+        <!-- future-day-section -->
+        <div id="future-day-forecast"></div>
 
-        <div id="date"></div>
+    </div> <!-- main-section-closed -->
 
 
-    </div>
-
-
+    <!-- JS-link -->
     <script src="./script.js"></script>
 </body>
 
