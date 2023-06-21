@@ -20,10 +20,10 @@ function sub() {
                 document.getElementById("cond").innerHTML = value1.current.condition.text
                 document.getElementById("imgMain").innerHTML = `<img src="${value1.current.condition.icon}">`
                 document.getElementById("temp").innerHTML = `${Math.round(value1.current.temp_c)}<span class="celcius">\u00B0C</span>`
-                let dateTime = [...(value1.location.localtime)]
-                dateTime.push(" ")
-                // console.log(dateTime)
-                document.getElementById("date-time").innerHTML = `${dateTime[8]}${dateTime[9]}${dateTime[7]}${dateTime[5]}${dateTime[6]}${dateTime[4]}${dateTime[0]}${dateTime[1]}${dateTime[2]}${dateTime[3]}${dateTime[10]}${dateTime[11]}${dateTime[12]}${dateTime[13]}${dateTime[14]}${dateTime[15]}`
+
+                let dateTime = new Date()
+                // console.log(dateTime.toLocaleString())
+                document.getElementById("date-time").innerHTML = `${dateTime.toLocaleString()}`
                 document.getElementById("wind").innerHTML = `${value1.current.wind_kph} km/h`
                 document.getElementById("cloud").innerHTML = `${value1.current.cloud}%`
                 document.getElementById("humidity").innerHTML = `${value1.current.humidity}%`
@@ -76,6 +76,8 @@ function sub() {
 
 
     document.getElementById("country-name").value = ""
+    document.getElementById("future-day-forecast").innerHTML = ""
+
     document.getElementById("firstDay").innerHTML = ""
     document.getElementById("secondDay").innerHTML = ""
     document.getElementById("date").innerHTML = ""

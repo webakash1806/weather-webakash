@@ -222,7 +222,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 15rem;
+    /* height: 15rem; */
     overflow-y: scroll;
     scroll-behavior: smooth;
     overflow: auto;
